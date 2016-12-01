@@ -21,10 +21,11 @@ If you run into an issue raise an issue here, I'll look into it when I have the 
 ### Installation
  - Clone or download this project into your `www` or `httpdocs` folder
  - Create a new mysql database using phpMyAdmin or other means with any name of your choice
- - Import the `users.sql` file into this newly created database
  - Open the file `ci-ng-setup/api/application/config/database.php` in a text editor
+ - Open this url `localhost/ci-ng-setup/api/migrate`, this sets up the database
  - Change this file's settings to your database configuration
  - Open this folder in a browser, eg url, `localhost/ci-ng-setup/`
- - Default username is `administrator` and the password is `password`
+ - Default admin username is `administrator` and the password is `password`
+ - You can create new users once you login in as an admin
 
 
