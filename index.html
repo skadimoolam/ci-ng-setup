@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="ci-ng-auth">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CI-NG Auth</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="./libs/AdminLTE/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./libs//font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./libs/AdminLTE/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="./libs/AdminLTE/dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="./libs/AdminLTE/plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" href="./libs/angular-notify/dist/angular-notify.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini fixed" ng-class="{ 'login-page': currentState == 'login' || currentState == 'register'}">
+<!-- <body class="hold-transition skin-blue sidebar-close fixed"> -->
+
+<div ui-view></div>
+
+<script src="./libs/jquery/dist/jquery.js"></script>
+<script src="./libs/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="./libs/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+<script src="./libs/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="./libs/AdminLTE/dist/js/app.min.js"></script>
+
+<script type="text/javascript" src="./libs/angular/angular.min.js"></script>
+<script type="text/javascript" src="./libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="./libs/angular-notify/dist/angular-notify.min.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+<script type="text/javascript" src="./js/app.routes.js"></script>
+<script type="text/javascript" src="./js/app.routes.admin.js"></script>
+<script type="text/javascript" src="./js/app.routes.user.js"></script>
+<script type="text/javascript" src="./js/UrlService.js"></script>
+</body>
+</html>

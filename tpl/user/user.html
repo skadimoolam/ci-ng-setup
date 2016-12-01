@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <header class="main-header">
+    <a href="" ui-sref="main" class="logo">
+      <span class="logo-lg"><b>CI-NG AUTH</b></span>
+    </a>
+
+    <nav class="navbar navbar-static-top" role="navigation">
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- <li><a ng-click="quitApp('min')" tabindex="-1" href="#"><i class="fa fa-minus"></i></a></li>
+          <li><a ng-click="quitApp('max')" tabindex="-1" href="#"><i class="fa fa-square-o"></i></a></li>
+          <li><a ng-click="quitApp('close')" tabindex="-1" href="#"><i class="fa fa-times"></i></a></li> -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <ul class="sidebar-menu">
+        <li ng-class="{'active': currentState == 'user.dashboard'}"><a href="#" ui-sref="user.dashboard"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+        <li ng-class="{'active': currentState == 'user.settings'}"><a href="#" ui-sref="user.settings"><i class="fa fa-cogs"></i> <span>Settings</span></a></li>
+        <li><a href="#" ng-click="logout('login')"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
+
+        <!-- <li class="header">Orders</li> -->
+      </ul>
+    </section>
+  </aside>
+
+  <div class="content-wrapper">
+    <div ui-view></div>
+  </div>
+  
+  <footer class="main-footer"><strong>Copyright &copy; <a href="">Cobra Softwares Inc</a>.</strong> All rights reserved.</footer>
+</div>
+
+<script src="./libs/AdminLTE/dist/js/app.min.js"></script>

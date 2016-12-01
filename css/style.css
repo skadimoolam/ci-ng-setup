@@ -1,0 +1,50 @@
+@font-face {
+	font-family: opensanscust;
+	src: url(OpenSans-Regular.ttf);
+}
+@font-face {
+	font-family: robotoslabcust;
+	src: url(RobotoSlab-Regular.ttf);
+}
+@font-face {
+	font-family: robotocust;
+	src: url(Roboto-Regular.ttf);
+}
+
+body, html {
+	font-family: robotocust;
+	overflow: hidden;
+	-webkit-user-select: none;
+}
+
+.main-header {
+	-webkit-app-region: drag;
+}
+
+.navbar-nav > li {
+	-webkit-app-region: no-drag;
+}
+
+th > input[type=checkbox], td > input[type=checkbox] {
+	width: 17px;
+	height: 17px;
+}
+
+.content-wrapper {
+	height: 100px;
+	overflow-y: auto;
+}
+
+.sidebar-menu > li.header {
+	font-size: medium;
+}
+
+.logo-lg { font-family: robotoslabcust; }
+
+.info-box { box-shadow: 0 1px 1px rgba(0, 0, 0, 0.48); }
+
+.cust-box {
+	max-height: 160px;
+	height: 160px;
+	min-height: 160px;
+}

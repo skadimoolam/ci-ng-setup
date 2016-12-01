@@ -1,0 +1,60 @@
+<section class="content-header"><h1>Add New User</h1></section>
+
+<section class="content">
+  <div class="box">
+    <div class="box-body">
+      
+      <form class="row" role="form" novalidate name="registerform">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>First Name</label>
+            <input ng-model="registerForm.first_name" type="text" class="form-control" placeholder="Enter First Name" required />
+          </div>
+
+          <div class="form-group">
+            <label>Last Name</label>
+            <input ng-model="registerForm.last_name" type="text" class="form-control" placeholder="Enter Last Name" />
+          </div>
+          
+          <div class="form-group">
+            <label>Email</label>
+            <input ng-model="registerForm.email" type="email" class="form-control" placeholder="Enter Email" required />
+          </div>
+
+          <div class="form-group">
+            <label>Company</label>
+            <input ng-model="registerForm.company" type="text" class="form-control" placeholder="Enter Company" />
+          </div>
+
+          <div class="form-group">
+            <label>Phone</label>
+            <input ng-model="registerForm.phone" type="text" class="form-control" placeholder="Enter Phone" />
+          </div>
+
+          <div class="form-group">
+            <label>Username</label>
+            <input ng-model="registerForm.username" type="text" class="form-control" placeholder="Enter Username" required />
+          </div>
+
+					<div class="form-group">
+            <label>Password</label>
+            <input ng-model="registerForm.password" type="text" class="form-control" placeholder="Enter Password" required />
+          </div>
+
+          <div class="form-group">
+            <label>Select User type</label>
+            <select class="form-control" ng-model="registerForm.user_type" required>
+            	<option value="1">Admin</option>
+            	<option value="2">Member</option>
+            </select>
+          </div>
+        </div>
+
+        <span class="col-md-12 col-sm-12 col-lg-12 col-sx-12">
+          <button class="btn btn-primary" ng-disabled="registerform.$invalid" ng-click="register()">Add new user</button>
+          <button class="btn btn-danger pull-right" tabindex="-1" ng-click="registerForm = {}">Reset Form</button>
+        </span>
+      </form>
+    </div>
+  </div>
+</section>

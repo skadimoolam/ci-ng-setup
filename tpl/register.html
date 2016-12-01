@@ -1,0 +1,42 @@
+<div class="login-box" style="width: 360px;">
+  <div class="login-logo">
+    <a>Register</a>
+  </div>
+  <div class="login-box-body">
+    <form name="loginform" novalidate>
+      <div class="form-group">
+        <input ng-model="registerForm.first_name" type="text" class="form-control" placeholder="First Name" required />
+      </div>
+
+      <div class="form-group">
+        <input ng-model="registerForm.last_name" type="text" class="form-control" placeholder="Last Name" />
+      </div>
+      
+      <div class="form-group">
+        <input ng-model="registerForm.email" type="email" class="form-control" placeholder="Email" required />
+      </div>
+
+      <div class="form-group">
+        <input ng-model="registerForm.company" type="text" class="form-control" placeholder="Company" />
+      </div>
+
+      <div class="form-group">
+        <input ng-model="registerForm.phone" type="text" class="form-control" placeholder="Phone" />
+      </div>
+
+      <div class="form-group">
+        <input ng-model="registerForm.username" type="text" class="form-control" placeholder="Username" required />
+      </div>
+
+      <div class="form-group">
+        <input ng-model="registerForm.password" type="text" class="form-control" placeholder="Password" required />
+      </div>
+      <div class="row">
+        <div class="col-sm-offset-4 col-sm-8 col-xs-offset-4 col-xs-8">
+          <button type="submit" class="btn btn-primary btn-block btn-flat" ng-disabled="loginform.$invalid" ng-click="register()">Register</button>
+          <button ui-sref="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
