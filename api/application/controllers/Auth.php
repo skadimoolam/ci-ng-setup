@@ -14,10 +14,10 @@ class Auth extends CI_Controller {
 			$user = $this->auth_model->get_user_info($user_id);
 			$user->group = $this->ion_auth->get_users_groups($user_id)->row()->name;
 
-			print_r(json_encode(array('message' => $this->ion_auth->messages(), 'code' => 'success', 'data' => $user)));
+			$this->output->set_content_type('application/json')->set_output(json_encode(array('message' => $this->ion_auth->messages(), 'code' => 'success', 'data' => $user)));
 		}
 		else {
-			print_r(json_encode(array('message' => $this->ion_auth->errors(), 'code' => 'error')));
+			$this->output->set_content_type('application/json')->set_output(json_encode(array('message' => $this->ion_auth->errors(), 'code' => 'error')));
 		}
 	}
 
@@ -34,9 +34,9 @@ class Auth extends CI_Controller {
 		$result = $this->ion_auth->register($this->input->post('username'), $this->input->post('password'), $this->input->post('email'), $user_info, $user_group);
 
 		if ($result != false) {
-			print_r(json_encode(array('message' => $this->ion_auth->messages(), 'code' => 'success')));
+			$this->output->set_content_type('application/json')->set_output(json_encode(array('message' => $this->ion_auth->messages(), 'code' => 'success')));
 		} else {
-			print_r(json_encode(array('message' => $this->ion_auth->errors(), 'code' => 'error')));
+			$this->output->set_content_type('application/json')->set_output(json_encode(array('message' => $this->ion_auth->errors(), 'code' => 'error')));
 		}
 	}
 
@@ -51,9 +51,9 @@ class Auth extends CI_Controller {
 		$result = $this->ion_auth->update($this->input->post('id'), $user_info);
 
 		if ($result) {
-			print_r(json_encode(array('message' => $this->ion_auth->messages(), 'code' => 'success')));
+			$this->output->set_content_type('application/json')->set_output(json_encode(array('message' => $this->ion_auth->messages(), 'code' => 'success')));
 		} else {
-			print_r(json_encode(array('message' => $this->ion_auth->errors(), 'code' => 'error')));
+			$this->output->set_content_type('application/json')->set_output(json_encode(array('message' => $this->ion_auth->errors(), 'code' => 'error')));
 		}
 	}
 
@@ -61,6 +61,6 @@ class Auth extends CI_Controller {
 		$user_id = $this->input->post('id');
 		$user = $this->auth_model->get_user_info($user_id);
 		$user->group = $this->ion_auth->get_users_groups($user_id)->row()->name;
-		print_r(json_encode(array('code' => 'success', 'data' => $user)));
+		$this->output->set_content_type('application/json')->set_output(json_encode(array('code' => 'success', 'data' => $user)));
 	}
 }
