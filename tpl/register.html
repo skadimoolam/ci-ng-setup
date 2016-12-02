@@ -29,11 +29,16 @@
       </div>
 
       <div class="form-group">
-        <input ng-model="registerForm.password" type="text" class="form-control" placeholder="Password" required />
+        <input ng-model="registerForm.password" type="password" class="form-control" placeholder="Password" required />
       </div>
+
+      <div class="form-group">
+        <input ng-model="registerForm.repassword" type="password" class="form-control" placeholder="Reenter Password" required />
+      </div>
+
       <div class="row">
         <div class="col-sm-offset-4 col-sm-8 col-xs-offset-4 col-xs-8">
-          <button type="submit" class="btn btn-primary btn-block btn-flat" ng-disabled="loginform.$invalid" ng-click="register()">Register</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat" ng-disabled="loginform.$invalid || registerForm.password != registerForm.repassword" ng-click="register()">Register</button>
           <button ui-sref="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
         </div>
       </div>
